@@ -1,18 +1,14 @@
-// CurrentWeather.jsx
-import React, { useContext } from 'react';
-import { useWeather } from '../context/WeatherContext';import './CurrentWeather.css';
+// components/CurrentWeather.jsx
+import React from 'react';
+import useWeather from '../hooks/useWeather';
+import './CurrentWeather.css';
 
 const CurrentWeather = () => {
-    const { weatherData, convertTemp, loading } = useContext(WeatherContext);
-
-    if (loading) {
-        return <div className="clima-actual">Cargando...</div>;
-    }
-
-    if (!weatherData) {
-        return <div className="clima-actual">No hay datos del clima</div>;
-    }
-
+    const { weatherData, convertTemp, loading } = useWeather();
+    
+    if (loading) return <div className="clima-actual">Cargando...</div>;
+    if (!weatherData) return <div className="clima-actual">No hay datos</div>;
+    
     return (
         <div className="clima-actual">
             <h2 className="ubicacion">{weatherData.location}</h2>

@@ -1,4 +1,4 @@
-/* WeatherDetails.css */
+/* components/WeatherDetails.css */
 .detalles-clima {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -1,18 +1,17 @@
-// DailyForecast.jsx
-import React, { useContext } from 'react';
-import { useWeather } from '../context/WeatherContext';import './DailyForecast.css';
+// components/DailyForecast.jsx
+import React from 'react';
+import useWeather from '../hooks/useWeather';
+import './DailyForecast.css';
 
 const DailyForecast = () => {
-    const { dailyData, convertTemp, loading } = useContext(WeatherContext);
+    const { dailyData, convertTemp, loading } = useWeather();
 
-    if (loading) {
-        return (
-            <div className="pronostico-diario">
-                <h3 className="titulo-seccion">Próximos 5 días</h3>
-                <div>Cargando...</div>
-            </div>
-        );
-    }
+    if (loading) return (
+        <div className="pronostico-diario">
+            <h3 className="titulo-seccion">Próximos 5 días</h3>
+            <div>Cargando...</div>
+        </div>
+    );
 
     return (
         <div className="pronostico-diario">

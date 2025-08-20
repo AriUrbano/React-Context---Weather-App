@@ -1,22 +1,21 @@
-// CitiesWeather.jsx
-import React, { useContext } from 'react';
-import { useWeather } from '../context/WeatherContext';import './CitiesWeather.css';
+// components/CitiesWeather.jsx
+import React from 'react';
+import useWeather from '../hooks/useWeather';
+import './CitiesWeather.css';
 
 const CitiesWeather = () => {
-    const { citiesData, convertTemp, loading, searchCity } = useContext(WeatherContext);
+    const { citiesData, convertTemp, loading, searchCity } = useWeather();
 
     const handleCityClick = (cityName) => {
         searchCity(cityName);
     };
 
-    if (loading) {
-        return (
-            <div className="ciudades-clima">
-                <h3 className="titulo-seccion">Otras Ciudades</h3>
-                <div>Cargando...</div>
-            </div>
-        );
-    }
+    if (loading) return (
+        <div className="ciudades-clima">
+            <h3 className="titulo-seccion">Otras Ciudades</h3>
+            <div>Cargando...</div>
+        </div>
+    );
 
     return (
         <div className="ciudades-clima">

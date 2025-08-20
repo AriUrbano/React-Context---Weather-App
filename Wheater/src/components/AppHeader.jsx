@@ -1,10 +1,10 @@
-// AppHeader.jsx
-import React, { useContext, useState } from 'react';
-import { WeatherContext } from './WeatherContext';
+// components/AppHeader.jsx
+import React, { useState } from 'react';
+import useWeather from '../hooks/useWeather';
 import './AppHeader.css';
 
 const AppHeader = () => {
-    const { unit, toggleUnit, searchCity } = useContext(WeatherContext);
+    const { unit, toggleUnit, searchCity } = useWeather();
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleSearch = () => {
@@ -15,9 +15,7 @@ const AppHeader = () => {
     };
 
     const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            handleSearch();
-        }
+        if (e.key === 'Enter') handleSearch();
     };
 
     return (

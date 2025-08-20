@@ -1,14 +1,12 @@
-// WeatherDetails.jsx
-import React, { useContext } from 'react';
-import { WeatherContext } from './WeatherContext';
+// components/WeatherDetails.jsx
+import React from 'react';
+import useWeather from '../hooks/useWeather';
 import './WeatherDetails.css';
 
 const WeatherDetails = () => {
-    const { weatherData, convertTemp, loading } = useContext(WeatherContext);
+    const { weatherData, convertTemp, loading } = useWeather();
 
-    if (loading || !weatherData) {
-        return null;
-    }
+    if (loading || !weatherData) return null;
 
     return (
         <div className="detalles-clima">

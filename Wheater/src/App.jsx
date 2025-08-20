@@ -1,12 +1,12 @@
-// App.jsx
+// components/App.jsx
 import React from 'react';
-import AppHeader from './AppHeader';
-import CurrentWeather from './CurrentWeather';
-import WeatherDetails from './WeatherDetails';
-import HourlyForecast from './HourlyForecast';
-import DailyForecast from './DailyForecast';
-import CitiesWeather from './CitiesWeather';
-import { WeatherProvider } from './WeatherContext';
+import AppHeader from './components/AppHeader';
+import CurrentWeather from './components/CurrentWeather';
+import WeatherDetails from './components/WeatherDetails';
+import HourlyForecast from './components/HourlyForecast';
+import DailyForecast from './components/DailyForecast';
+import CitiesWeather from './components/CitiesWeather';
+import WeatherProvider from './context/WeatherProvider';
 import './App.css';
 
 const App = () => {

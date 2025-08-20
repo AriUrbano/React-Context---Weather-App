@@ -1,0 +1,51 @@
+/* CitiesWeather.css */
+.ciudades-clima {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.titulo-seccion {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.tarjeta-ciudad {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.tarjeta-ciudad:hover {
+    transform: translateY(-5px);
+}
+
+.nombre-ciudad {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.clima-principal-ciudad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temp-ciudad {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.icono-ciudad {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

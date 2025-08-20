@@ -1,0 +1,25 @@
+/* WeatherDetails.css */
+.detalles-clima {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.item-detalle {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.etiqueta-detalle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.valor-detalle {
+    font-size: 18px;
+    font-weight: 600;
+}

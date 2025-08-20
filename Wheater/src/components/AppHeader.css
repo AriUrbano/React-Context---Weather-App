@@ -1,0 +1,61 @@
+/* AppHeader.css */
+.app-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.app-titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    gap: 10px;
+}
+
+.entrada-busqueda {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 16px;
+}
+
+.boton-busqueda {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.boton-busqueda:hover {
+    background-color: #ff5252;
+}
+
+.selector-unidad {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.selector-unidad span {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.selector-unidad .activo {
+    background-color: #ff6b6b;
+    font-weight: 600;
+}

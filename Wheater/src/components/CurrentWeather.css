@@ -1,0 +1,45 @@
+/* CurrentWeather.css */
+.clima-actual {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+}
+
+.ubicacion {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.fecha-hora {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.clima-principal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.temperatura {
+    font-size: 64px;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.icono-clima {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estado-clima {
+    font-size: 20px;
+    margin-top: 10px;
+}
